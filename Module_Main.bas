@@ -28,7 +28,8 @@ Public Sub Main()
  s = Replace$(s, Chr$(34), "")
  
  s = Left$(s, InStr(vbNull, s, vbNullChar, vbBinaryCompare) - vbNull)
- 
- WriteStdOut GetShortPath(s)
+ s = GetShortPath(s)
+
+ WriteStdOut s
 End Sub
 
